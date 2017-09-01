@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="10">
+    <widget class="QGroupBox" name="previewerBox">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>WebPagePreview</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QWebView" name="webView">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="url">
+         <url>
+          <string>about:blank</string>
+         </url>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="signButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>开始签到</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLCDNumber" name="retryCount">
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="digitCount">
+      <number>8</number>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" colspan="2">
+    <widget class="QPushButton" name="homeButton">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>签到页面</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="formhashLabel">
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>formhash</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLineEdit" name="formhashData">
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" colspan="2">
+    <widget class="QPushButton" name="saveSettingButton">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>保存设置</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="qdxqLabel">
+     <property name="text">
+      <string>心情</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QComboBox" name="qdxqComboBox">
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <item>
+      <property name="text">
+       <string>开心</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>难过</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>郁闷</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>无聊</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>怒</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>擦汗</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>奋斗</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>慵懒</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>衰</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="3" colspan="2">
+    <widget class="QLabel" name="loginStatuslabel">
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>90</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;未登录&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="qdxqLabel_2">
+     <property name="text">
+      <string>用户名</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="3">
+    <widget class="QLineEdit" name="userName"/>
+   </item>
+   <item row="4" column="1" colspan="4">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>我今天最想说</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPlainTextEdit" name="todaysayTextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumBlockCount">
+         <number>10</number>
+        </property>
+        <property name="placeholderText">
+         <string>限制最少3个,最多50个中文字数</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QCheckBox" name="startTimecheckBox">
+     <property name="maximumSize">
+      <size>
+       <width>90</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>开始时间</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QTimeEdit" name="starttimeEdit">
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="displayFormat">
+      <string>HH:mm</string>
+     </property>
+     <property name="time">
+      <time>
+       <hour>23</hour>
+       <minute>58</minute>
+       <second>0</second>
+      </time>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3" rowspan="2" colspan="2">
+    <widget class="QCheckBox" name="shutdowncheckBox">
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>自动结束时
+ 自动关机</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="endTimelabel">
+     <property name="maximumSize">
+      <size>
+       <width>75</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>  结束时间</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QTimeEdit" name="endtimeEdit">
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="displayFormat">
+      <string>HH:mm</string>
+     </property>
+     <property name="time">
+      <time>
+       <hour>0</hour>
+       <minute>2</minute>
+       <second>0</second>
+      </time>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLabel" name="localTimeNamelabel">
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>本地</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="curTimelabel">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QLabel" name="forumTimeNamelabel">
+     <property name="minimumSize">
+      <size>
+       <width>38</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>论坛</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QLabel" name="forumTimelabel">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLabel" name="ResendTimerlabel">
+     <property name="text">
+      <string>间隔</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QSpinBox" name="ResendTimespinBox">
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="singleStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1" colspan="4">
+    <widget class="QGroupBox" name="editorBox">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="title">
+      <string>结果代码</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="plainText">
+         <string>&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,chrome=1&quot; /&gt;
+  &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot; /&gt;
+  &lt;title&gt;安全检查中...&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+    html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+    body {background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 100%;}
+    h1 {font-size: 1.5em; color: #404040; text-align: center;}
+    p {font-size: 1em; color: #404040; text-align: center; margin: 10px 0 0 0;}
+    #spinner {margin: 0 auto 30px auto; display: block;}
+    .attribution {margin-top: 20px;}
+  &lt;/style&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+  //&lt;![CDATA[
+  (function(){
+    var a = function() {try{return !!window.addEventListener} catch(e) {return !1} },
+    b = function(b, c) {a() ? document.addEventListener(&quot;DOMContentLoaded&quot;, b, c) : document.attachEvent(&quot;onreadystatechange&quot;, b)};
+    b(function(){
+      var a = document.getElementById('yjs-content');a.style.display = 'block';
+      setTimeout(function(){
+        var s,t,o,p,b,r,e,a,k,i,n,g,f, uRBJPGu={&quot;LJKNLnyzunah&quot;:+((!+[]+!![]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![]))};
+        t = document.createElement('div');
+        t.innerHTML=&quot;&lt;a href='/'&gt;x&lt;/a&gt;&quot;;
+        t = t.firstChild.href;r = t.match(/https?:\/\//)[0];
+        t = t.substr(r.length); t = t.substr(0,t.length-1);
+        a = document.getElementById('jschl-answer');
+        f = document.getElementById('challenge-form');
+        ;uRBJPGu.LJKNLnyzunah+=!+[]+!![]+!![]+!![]+!![];uRBJPGu.LJKNLnyzunah+=+((!+[]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]));uRBJPGu.LJKNLnyzunah*=+((!+[]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]));uRBJPGu.LJKNLnyzunah*=+((+!![]+[])+(!+[]+!![]+!![]));uRBJPGu.LJKNLnyzunah-=+((!+[]+!![]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]));uRBJPGu.LJKNLnyzunah-=+((!+[]+!![]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![]));uRBJPGu.LJKNLnyzunah*=+((!+[]+!![]+!![]+!![]+[])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]));uRBJPGu.LJKNLnyzunah-=+((!+[]+!![]+!![]+!![]+[])+(+[]));a.value = parseInt(uRBJPGu.LJKNLnyzunah, 10) + t.length; '; 121'
+        f.submit();
+      }, 4000);
+    }, false);
+  })();
+  //]]&gt;
+&lt;/script&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;20&quot;&gt;
+    &lt;tr&gt;
+      &lt;td align=&quot;center&quot; valign=&quot;middle&quot;&gt;
+          &lt;div class=&quot;yjs-browser-verification yjs-im-under-attack&quot;&gt;
+  &lt;noscript&gt;&lt;h1 data-translate=&quot;turn_on_js&quot; style=&quot;color:#bd2426;&quot;&gt;请打开浏览器的javascript，然后刷新浏览器&lt;/h1&gt;&lt;/noscript&gt;
+  &lt;div id=&quot;yjs-content&quot; style=&quot;display:none&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;bubbles&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;bubbles&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;bubbles&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;kamigami.org &lt;span data-translate=&quot;checking_browser&quot;&gt;浏览器安全检查中...&lt;/span&gt;&lt;/h1&gt;
+    &lt;p data-translate=&quot;process_is_automatic&quot;&gt;&lt;/p&gt;
+    &lt;p data-translate=&quot;allow_5_secs&quot;&gt;还剩 5 秒&amp;hellip;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;form id=&quot;challenge-form&quot; action=&quot;/cdn-cgi/l/chk_jschl&quot; method=&quot;get&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;jschl_vc&quot; value=&quot;13239dd4f8b0736107556df4c73a2068&quot;/&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;pass&quot; value=&quot;1500990673.796-wsPWAWjqHS&quot;/&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;jschl-answer&quot; name=&quot;jschl_answer&quot;/&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+
+
+          &lt;div class=&quot;attribution&quot;&gt;&lt;a href=&quot;http://su.baidu.com/&quot; target=&quot;_blank&quot; style=&quot;font-size: 12px;&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
