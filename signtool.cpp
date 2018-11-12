@@ -145,10 +145,10 @@ void SignTool::setAppProxy(void)
 {
     QNetworkProxy proxy;
     proxy.setType(QNetworkProxy::HttpProxy);
-    proxy.setHostName("dl-proxy.neusoft.com");
+    proxy.setHostName("xxx.xxx.xxx");
     proxy.setPort(8080);
-    proxy.setUser("li-m");
-    proxy.setPassword("alKNoo15");
+    proxy.setUser("xxx");
+    proxy.setPassword("xxxxx");
     QNetworkProxy::setApplicationProxy(proxy);
 }
 #endif
